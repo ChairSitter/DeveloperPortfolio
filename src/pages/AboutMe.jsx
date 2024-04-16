@@ -1,15 +1,16 @@
 export default function AboutMe() {
     return (
-        <div>
-            <h2 className="page-content">About Page</h2>
-            <p>
-                Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-                Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-                mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-                lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-                imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-                in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-            </p>
-        </div>
+        <>
+            <h2 className="page-title">About Page</h2>
+            <div className="page-content">
+                <img id="bryan" src="src\assets\images\LinkedInBeachPic.jpeg" alt="Picture of Bryan" />
+                <p id="about-text">
+                    Hi, I'm Bryan! I'm a web developer in the Raleigh-Durham, North Carolina area. I enjoy coding in HTML,
+                    CSS, and JavaScript to make awesome web content and boost business. With my experience in the brain injury rehab field,
+                    I challenge myself to optimize the accessibility of the content I create using the things I've learned about the needs of
+                    diverse individuals. Let me help take your team and your site to the next level!
+                </p>
+            </div>
+        </>
     );
 }

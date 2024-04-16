@@ -1,14 +1,24 @@
 import { Link, useLocation } from 'react-router-dom';
+import { Image } from '@chakra-ui/react';
 import Navigation from "./Navigation";
 
 function Header() {
     const currentPage = useLocation().pathname;
     return (
         <header>
-            <h1 id="header-title">
-                Bryan Schneller's Web Portfolio
-            </h1>
-        <Navigation />
+            <div id="header-l">
+                <Image
+                    borderRadius='full'
+                    border='#3182CE 5px solid'
+                    boxSize='140px'
+                    src="../src/assets/images/Logo.png"
+                    alt='BS logo'
+                />
+                <h1 id="header-title">
+                    Bryan Schneller's Web Portfolio
+                </h1>
+            </div>
+            <Navigation />
         </header>
     );
 }
