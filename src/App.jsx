@@ -3,14 +3,14 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import { Outlet } from 'react-router-dom';
 import './App.css';
-import HeaderNav from './components/HeaderNav';
+import Header from './components/Header';
 import Footer from './components/Footer';
 
 function App() {
 
   return (
     <>
-      <HeaderNav></HeaderNav>
+      <Header></Header>
       <main>
         <Outlet />
       </main>

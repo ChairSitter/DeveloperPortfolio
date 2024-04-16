@@ -1,7 +1,7 @@
 export default function Contact() {
     return (
         <div>
-            <h1>Contact Page</h1>
+            <h2 className="page-content">Contact Page</h2>
             <p>
                 Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
                 molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
