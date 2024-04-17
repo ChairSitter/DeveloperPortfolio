@@ -1,21 +1,39 @@
+import { useState } from 'react';
+import {
+    FormControl,
+    FormLabel,
+    FormErrorMessage,
+    FormHelperText,
+    Input,
+    Textarea,
+    Button
+} from '@chakra-ui/react'
+
 export default function Contact() {
+    const [emailInput, setEmailInput] = useState('');
+    const handleEmailInputChange = (e) => setEmailInput(e.target.value);
+    const isError = emailInput.match('/^[a-zA-Z0-9. _%+-]+@[a-zA-Z0-9. -]+//. [a-zA-Z]{2,}$/');
+
     return (
         <>
-            <h2 className="page-title">Contact Page</h2>
-            <div className="page-content">
-                <p>
-                    Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-                    molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-                    magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-                    efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-                    mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-                    posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-                    faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-                    ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-                    dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-                    rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-                </p>
+            <h2 className="page-title">Contact Me:</h2>
+            <div id="contact-content" className="page-content">
+                <FormControl>
+                    <FormLabel>Name</FormLabel>
+                    <Input type="text"></Input>
+                    <FormLabel>Email</FormLabel>
+                    <Input type='email' isInvalid={isError} value={emailInput} onChange={handleEmailInputChange} />
+                    {isError ? (
+                        <FormHelperText>
+                            Enter your email and I will respond as soon as possible.
+                        </FormHelperText>
+                    ) : (
+                        <FormErrorMessage>Email is required.</FormErrorMessage>
+                    )}
+                    <FormLabel>Your Message:</FormLabel>
+                    <Textarea></Textarea>
+                    <Button colorScheme='blue'>Submit</Button>
+                </FormControl>
             </div>
         </>
     );

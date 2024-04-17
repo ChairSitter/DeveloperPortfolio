@@ -2,7 +2,7 @@ export default function AboutMe() {
     return (
         <>
             <h2 className="page-title">Hi, I'm Bryan!</h2>
-            <div className="page-content">
+            <div id="about-content" className="page-content">
                 <img id="bryan" src="src\assets\images\LinkedInBeachPic.jpeg" alt="Picture of Bryan" />
                 <p id="about-text">
                     I'm a full-stack web developer in the Raleigh-Durham, North Carolina area. 

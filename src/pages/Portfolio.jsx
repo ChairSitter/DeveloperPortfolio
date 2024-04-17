@@ -4,7 +4,7 @@ import { SimpleGrid } from '@chakra-ui/react';
 export default function Portfolio() {
     return (
         <>
-            <h2 className="page-title">Check out my projects and games!</h2>
+            <h2 className="page-title">Check out my projects and games:</h2>
             <div className="page-content" id="portfolio-content">
                 <SimpleGrid columns={3} spacing={10}>
                     <Project
@@ -48,7 +48,7 @@ export default function Portfolio() {
                         projAlt={'Gold Ring Guess app screenshot'}
                         projHeading={'Gold Ring Guess'}
                         projAdd={'estimation game'}
-                        projText={'This is a math and observation-based guessing game. Guess the value of the grid using the slider and go for the lowest total over 10 rounds.'}
+                        projText={'This is a math and observation guessing game. Guess the value of the grid using the slider and go for the lowest total difference over 10 rounds.'}
                         projURL={'https://chairsitter.github.io/Gold-Ring-Guess/'}
                         projGH={'https://github.com/ChairSitter/Gold-Ring-Guess'}
                     />

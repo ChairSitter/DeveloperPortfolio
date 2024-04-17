@@ -33,8 +33,8 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-image: linear-gradient(to bottom, black, var(--main-red), var(--main-red));
-    border-top: 10px solid black;
+    /* background-image: linear-gradient(to bottom, black, var(--main-red), var(--main-red), var(--main-red), var(--main-red)); */
+    background-color: var(--main-red);
     border-bottom: 10px solid black;
     padding-top: 5px;
 }
@@ -47,6 +47,7 @@ header {
 
 header img {
     box-shadow: 5px 5px black;
+    margin-top: 10px;
 }
 
 #header-title {
@@ -89,7 +90,7 @@ main {
     width: auto;
     border-radius: 50%;
     border: 10px solid black;
-    box-shadow: 8px 8px var(--main-yellow);
+    /* box-shadow: 8px 8px var(--main-yellow); */
     margin-left: 20px;
 }
 
@@ -105,8 +106,21 @@ main {
     padding: 40px 80px 40px 80px;
 }
 
+#about-content {
+    margin-bottom: 100px;
+}
+
 #portfolio-content {
     margin-bottom: 75px;
+}
+
+#contact-content {
+    margin: 0 100px 0 100px;
+    width: 500px;
+}
+
+#contact-content button {
+    margin-top: 10px;
 }
 
 /*Footer*/
@@ -117,7 +131,8 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-image: linear-gradient(to top, black, var(--main-red), var(--main-red));
+    /* background-image: linear-gradient(to top, black, var(--main-red), var(--main-red)); */
+    background-color: var(--main-red);
     border-top: 10px solid black;
     width: 100%;
     height: 60px;

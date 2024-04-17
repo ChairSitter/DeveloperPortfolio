@@ -24,7 +24,7 @@ export default function Project(props) {
                         </Link>
                         <Link href={projGH} isExternal>
                             <Button variant='ghost' colorScheme='blue'>
-                                On GitHub
+                                GitHub repo
                             </Button>
                         </Link>
                         </ButtonGroup>
