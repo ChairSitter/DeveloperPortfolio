@@ -7,16 +7,16 @@ export default function Navigation() {
         <>
             <ul className="navigation">
                 <li className="nav-item">
-                    <Link to="/" className={currentPage === '/' ? 'nav-link active' : 'nav-link'}><Button size="lg" colorScheme={'blue'}>ABOUT ME</Button></Link>
+                    <Link to="/"><Button size="lg" colorScheme={currentPage === '/' ? 'gray' : 'blue'}>ABOUT ME</Button></Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/Portfolio" className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}><Button size="lg" colorScheme={'blue'}>PORTFOLIO</Button></Link>
+                    <Link to="/Portfolio"><Button size="lg" colorScheme={currentPage === '/Portfolio' ? 'gray' : 'blue'}>PORTFOLIO</Button></Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/Contact" className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}><Button size="lg" colorScheme={'blue'}>CONTACT</Button></Link>
+                    <Link to="/Contact"><Button size="lg" colorScheme={currentPage === '/Contact' ? 'gray' : 'blue'}>CONTACT</Button></Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/Resume" className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}><Button size="lg" colorScheme={'blue'}>RESUME</Button></Link>
+                    <Link to="/Resume"><Button size="lg" colorScheme={currentPage === '/Resume' ? 'gray' : 'blue'}>RESUME</Button></Link>
                 </li>
             </ul>
         </>
