@@ -1,7 +1,7 @@
-import { Card, CardHeader, CardBody, CardFooter, Stack, Image, Heading, Text, Button } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Stack, Image, Heading, Text, Button, ButtonGroup, Link } from '@chakra-ui/react'
 
 export default function Project(props) {
-    const { projSource, projAlt, projHeading, projAdd, projText } = props;
+    const { projSource, projAlt, projHeading, projAdd, projText, projURL, projGH } = props;
     return (
         <>
             <Card maxW='sm'>
@@ -16,9 +16,18 @@ export default function Project(props) {
                         <Text>
                             {projText}
                         </Text>
-                        <Button variant='solid' colorScheme='blue'>
-                            Visit {projHeading}
-                        </Button>
+                        <ButtonGroup>
+                        <Link href={projURL} isExternal>
+                            <Button variant='solid' colorScheme='blue'>
+                                Visit {projHeading}
+                            </Button>
+                        </Link>
+                        <Link href={projGH} isExternal>
+                            <Button variant='ghost' colorScheme='blue'>
+                                On GitHub
+                            </Button>
+                        </Link>
+                        </ButtonGroup>
                     </Stack>
                 </CardBody>
             </Card>

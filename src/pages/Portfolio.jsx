@@ -4,7 +4,7 @@ import { SimpleGrid } from '@chakra-ui/react';
 export default function Portfolio() {
     return (
         <>
-            <h2 className="page-title">Check out my portfolio!</h2>
+            <h2 className="page-title">Check out my projects and games!</h2>
             <div className="page-content" id="portfolio-content">
                 <SimpleGrid columns={3} spacing={10}>
                     <Project
@@ -13,7 +13,8 @@ export default function Portfolio() {
                         projHeading={'MediMinder'}
                         projAdd={'medication app'}
                         projText={'This is a full-stack application that helps the user keep track of medication times and missed meds based on custom medication times.'}
-                        projURL={'url'}
+                        projURL={'https://mediminder-e3e3cf63329a.herokuapp.com/'}
+                        projGH={'https://github.com/cspecialblackberry/MediMinder-App'}
                     />
                     <Project
                         projSource={'../src/assets/images/BuyMeThingsImg.png'}
@@ -21,7 +22,8 @@ export default function Portfolio() {
                         projHeading={'Buy Me Things'}
                         projAdd={'wish list app'}
                         projText={'This full-stack application allows to create wish lists for gifts with any URL, and share them with other registered users.'}
-                        projURL={'url'}
+                        projURL={'https://smart-wish-list.onrender.com/'}
+                        projGH={'https://github.com/rbenjamin4/WishList'}
                     />
                     <Project
                         projSource={'../src/assets/images/ForecastImg.png'}
@@ -29,7 +31,8 @@ export default function Portfolio() {
                         projHeading={'Forecast Finder'}
                         projAdd={'weather app'}
                         projText={'This application utilizes the Open Weather Map API to fetch and display data for any city in the world. Stores previously searched locations.'}
-                        projURL={'url'}
+                        projURL={'https://chairsitter.github.io/WeatherApp/'}
+                        projGH={'https://github.com/ChairSitter/WeatherApp'}
                     />
                     <Project
                         projSource={'../src/assets/images/RainbowImg.png'}
@@ -37,7 +40,8 @@ export default function Portfolio() {
                         projHeading={'Rainbow Multi-Match'}
                         projAdd={'betting game'}
                         projText={'This game involves quick thinking to compare the outcome of two sets of boxes based on specific combos. Multiply wisely to boost your payouts.'}
-                        projURL={'url'}
+                        projURL={'https://chairsitter.github.io/MatchingGame/'}
+                        projGH={'https://github.com/ChairSitter/MatchingGame'}
                     />
                     <Project
                         projSource={'../src/assets/images/GoldRingGuessImg.png'}
@@ -45,7 +49,8 @@ export default function Portfolio() {
                         projHeading={'Gold Ring Guess'}
                         projAdd={'estimation game'}
                         projText={'This is a math and observation-based guessing game. Guess the value of the grid using the slider and go for the lowest total over 10 rounds.'}
-                        projURL={'url'}
+                        projURL={'https://chairsitter.github.io/Gold-Ring-Guess/'}
+                        projGH={'https://github.com/ChairSitter/Gold-Ring-Guess'}
                     />
                     <Project
                         projSource={'../src/assets/images/CyberWarImg.png'}
@@ -53,7 +58,8 @@ export default function Portfolio() {
                         projHeading={'Cyber War'}
                         projAdd={'card game'}
                         projText={'This is a bidding and bluffing game. Play your cards in the right order to win the center values and cash in on bonuses for shape, number, and color.'}
-                        projURL={'url'}
+                        projURL={'https://chairsitter.github.io/CyberWarGame/'}
+                        projGH={'https://github.com/ChairSitter/CyberWarGame'}
                     />
                 </SimpleGrid>
             </div>
