@@ -1,12 +1,21 @@
 import Project from "../components/Project";
 import { SimpleGrid } from '@chakra-ui/react';
 
+const breakpoints = {
+    base: '0em', // 0px
+    sm: '30em', // ~480px. em is a relative unit and is dependant on the font-size.
+    md: '48em', // ~768px
+    lg: '62em', // ~992px
+    xl: '80em', // ~1280px
+    '2xl': '96em', // ~1536px
+}
+
 export default function Portfolio() {
     return (
         <>
             <h2 className="page-title">Check out my projects and games:</h2>
             <div className="page-content" id="portfolio-content">
-                <SimpleGrid columns={3} spacing={10}>
+                <SimpleGrid columns={{base: 1, md: 2, lg: 3}} spacing={10}>
                     <Project
                         projSource={'../src/assets/images/MediMinderImg.png'}
                         projAlt={'MediMinder app screenshot'}
