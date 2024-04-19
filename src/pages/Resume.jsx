@@ -1,21 +1,14 @@
+import { Button, ButtonGroup } from '@chakra-ui/react';
+
 export default function Resume() {
     return (
         <>
             <h2 className="page-title">My Resume</h2>
-            <div className="page-content">
+            <div id="resume-content" className="page-content">
                 <p>
-                    Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-                    molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-                    magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-                    efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-                    mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-                    posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-                    faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-                    ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-                    dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-                    rhoncus. Etiam vel condimentum magna, quis tempor nulla.
+                    Please download my resume for more information, and feel free to reach out! <br/><br/><br/>
                 </p>
+                <a href='https://docs.google.com/document/d/1CWRwOXdJn2QbYx8FpbBax5Ox5ThEWTmKTurA3MQRqUw/edit?usp=sharing' target="_blank"><Button size='lg' colorScheme='blue'>Bryan's Resume</Button></a>
             </div>
         </>
     );
