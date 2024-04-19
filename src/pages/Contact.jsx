@@ -9,42 +9,21 @@ import {
     Button
 } from '@chakra-ui/react'
 
-const EmailInput = () => {
+export default function Contact() {
     const [email, setEmail] = useState('');
+    const [nameInput, setNameInput] = useState('');
+    const [textInput, setTextInput] = useState('');    
     const [validEmail, setValidEmail] = useState(true);
+    const [validName, setValidName] = useState(true);
+    const [validText, setValidText] = useState(true);
+    const [submitted, setSubmitted] = useState(false);
+    const [submitError, setSubmitError] = useState(false);
 
     const validateEmail = () => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const isValid = emailRegex.test(email);
         setValidEmail(isValid);
     };
-
-    const handleFocus = () => {
-        setValidEmail(true);
-    }
-
-    return (
-        <div>
-            <label htmlFor="email">Email:</label>
-            <Input
-                type="email"
-                id="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                onBlur={validateEmail}
-                onFocus={handleFocus}
-            />
-            {!validEmail && <p style={{ color: 'red' }}>Please enter a valid email</p>}
-        </div>
-    );
-};
-
-export default function Contact() {
-    const [nameInput, setNameInput] = useState('');
-    const [textInput, setTextInput] = useState('');
-    const [validName, setValidName] = useState(true);
-    const [validText, setValidText] = useState(true);
 
     const handleNameInputChange = (e) => {
         setNameInput(e.target.value);
@@ -62,11 +41,30 @@ export default function Contact() {
     }
     const handleNameFocus = () => {
         setValidName(true);
+        setSubmitted(false);
+        setSubmitError(false);
+    }
+    const handleEmailFocus = () => {
+        setValidEmail(true);
+        setSubmitted(false);
+        setSubmitError(false);
     }
     const handleTextFocus = () => {
         setValidText(true);
+        setSubmitted(false);
+        setSubmitError(false);
     }
 
+    const handleSubmit = () => {
+        if (validName && validText && validEmail) {
+            setNameInput('')
+            setTextInput('')
+            setEmail('')
+            setSubmitted(true);
+        } else {
+            setSubmitError(true);
+        }
+    }
 
     return (
         <>
@@ -74,23 +72,37 @@ export default function Contact() {
             <div id="contact-content" className="page-content">
                 <FormControl>
                     <FormLabel>Name</FormLabel>
-                    <Input type="text" 
-                    value={nameInput} 
-                    onChange={handleNameInputChange} 
-                    onBlur={handleNameBlur}
-                    onFocus={handleNameFocus}></Input>
+                    <Input type="text"
+                        value={nameInput}
+                        onChange={handleNameInputChange}
+                        onBlur={handleNameBlur}
+                        onFocus={handleNameFocus}></Input>
                     {!validName && <p style={{ color: 'red' }}>Please enter your name</p>}
 
-                    <EmailInput></EmailInput>
+                    <div>
+                        <FormLabel>Email:</FormLabel>
+                        <Input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            onBlur={validateEmail}
+                            onFocus={handleEmailFocus}
+                        />
+                        {!validEmail && <p style={{ color: 'red' }}>Please enter a valid email</p>}
+                    </div>
 
                     <FormLabel>Your Message:</FormLabel>
-                    <Textarea value={textInput} 
-                    onChange={handleTextInputChange} 
-                    onBlur={handleTextBlur}
-                    onFocus={handleTextFocus}></Textarea>
+                    <Textarea value={textInput}
+                        onChange={handleTextInputChange}
+                        onBlur={handleTextBlur}
+                        onFocus={handleTextFocus}></Textarea>
                     {!validText && <p style={{ color: 'red' }}>Please enter a message</p>}
+                    {submitted && <p>Submitted!</p>}
+                    {submitError && <p style={{ color: 'red' }}>Please complete all fields before submitting</p>}
+                    <Button colorScheme='blue' onClick={handleSubmit}>Submit</Button>
 
-                    <Button colorScheme='blue'>Submit</Button>
                 </FormControl>
             </div>
         </>
