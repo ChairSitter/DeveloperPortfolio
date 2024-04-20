@@ -4,13 +4,15 @@ export default function Project(props) {
     const { projSource, projAlt, projHeading, projAdd, projText, projURL, projGH } = props;
     return (
         <>
-            <Card maxW='sm'>
+            <Card maxW='sm' m={2}>
                 <CardBody>
-                    <Image
-                        src={projSource}
-                        alt={projAlt}
-                        borderRadius='lg'
-                    />
+                    <Link href={projURL} isExternal>
+                        <Image
+                            src={projSource}
+                            alt={projAlt}
+                            borderRadius='lg'
+                        />
+                    </Link>
                     <Stack mt='6' spacing='3'>
                         <Heading size='md'>{projHeading} {projAdd}</Heading>
                         <Text>
@@ -24,7 +26,7 @@ export default function Project(props) {
                         </Link>
                         <Link href={projGH} isExternal>
                             <Button variant='ghost' colorScheme='blue'>
-                                GitHub repo
+                                GitHub
                             </Button>
                         </Link>
                         </ButtonGroup>

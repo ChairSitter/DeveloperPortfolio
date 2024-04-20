@@ -15,25 +15,7 @@ export default function Portfolio() {
         <>
             <h2 className="page-title">Check out my projects and games:</h2>
             <div className="page-content" id="portfolio-content">
-                <SimpleGrid columns={{base: 1, md: 2, lg: 3}} spacing={10}>
-                    <Project
-                        projSource={'../src/assets/images/MediMinderImg.png'}
-                        projAlt={'MediMinder app screenshot'}
-                        projHeading={'MediMinder'}
-                        projAdd={'medication app'}
-                        projText={'This is a full-stack application that helps the user keep track of medication times and missed meds based on custom medication times.'}
-                        projURL={'https://mediminder-e3e3cf63329a.herokuapp.com/'}
-                        projGH={'https://github.com/cspecialblackberry/MediMinder-App'}
-                    />
-                    <Project
-                        projSource={'../src/assets/images/BuyMeThingsImg.png'}
-                        projAlt={'BuyMeThings app screenshot'}
-                        projHeading={'Buy Me Things'}
-                        projAdd={'wish list app'}
-                        projText={'This full-stack application allows to create wish lists for gifts with any URL, and share them with other registered users.'}
-                        projURL={'https://smart-wish-list.onrender.com/'}
-                        projGH={'https://github.com/rbenjamin4/WishList'}
-                    />
+                <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
                     <Project
                         projSource={'../src/assets/images/ForecastImg.png'}
                         projAlt={'Forecast Finder app screenshot'}
@@ -42,6 +24,24 @@ export default function Portfolio() {
                         projText={'This application utilizes the Open Weather Map API to fetch and display data for any city in the world. Stores previously searched locations.'}
                         projURL={'https://chairsitter.github.io/WeatherApp/'}
                         projGH={'https://github.com/ChairSitter/WeatherApp'}
+                    />
+                    <Project
+                        projSource={'../src/assets/images/BuyMeThingsImg.png'}
+                        projAlt={'BuyMeThings app screenshot'}
+                        projHeading={'Buy Me Things'}
+                        projAdd={'wish list app'}
+                        projText={'This full-stack application allows users to create wish lists for gifts with any URL, and share them with other registered users.'}
+                        projURL={'https://smart-wish-list.onrender.com/'}
+                        projGH={'https://github.com/rbenjamin4/WishList'}
+                    />
+                    <Project
+                        projSource={'../src/assets/images/MediMinderImg.png'}
+                        projAlt={'MediMinder app screenshot'}
+                        projHeading={'MediMinder'}
+                        projAdd={'medication app'}
+                        projText={'This is a full-stack application that helps the user keep track of medication times and missed meds based on custom medication times.'}
+                        projURL={'https://mediminder-e3e3cf63329a.herokuapp.com/'}
+                        projGH={'https://github.com/cspecialblackberry/MediMinder-App'}
                     />
                     <Project
                         projSource={'../src/assets/images/RainbowImg.png'}

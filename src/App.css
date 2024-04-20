@@ -14,17 +14,29 @@
     --main-yellow: #D69E2E;
 }
 
-/* body {
-    min-height: 100vh;
-    background-color: black;
-} */
+html {
+    overflow-y: scroll;
+}
 
 .platypi {
-  font-family: "Platypi", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
+.sedan-regular {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sedan-regular-italic {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
 
 /*Header*/
 
@@ -33,9 +45,9 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* background-image: linear-gradient(to bottom, black, var(--main-red), var(--main-red), var(--main-red), var(--main-red)); */
-    background-color: var(--main-red);
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.747)), url('./assets/images/redbackground.jpg');
     border-bottom: 10px solid black;
+    border-top: 15px solid black;
     padding-top: 5px;
 }
 
@@ -92,13 +104,14 @@ main {
     width: auto;
     border-radius: 50%;
     border: 10px solid black;
-    box-shadow: 8px 8px var(--main-yellow);
+    box-shadow: 6px 6px 5px var(--main-yellow);
     margin-left: 20px;
+    margin-top: 40px;
 }
 
 .page-title {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 50px;
+    font-family: sedan, 'Times New Roman', Times, serif;
+    font-size: 45px;
     text-align: center;
 }
 
@@ -108,8 +121,9 @@ main {
     padding: 40px 80px 40px 80px;
 }
 
-#about-content {
-    margin-bottom: 100px;
+#about-text-content {
+    display: flex;
+    flex-direction: column;
 }
 
 #portfolio-content {
@@ -140,29 +154,45 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--main-red);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), black), url('./assets/images/redbackground.jpg');
+    background-size: cover;
     border-top: 10px solid black;
     width: 100%;
     height: 60px;
+    z-index: 1;
 }
 
 footer p {
     font-size: 20px;
+    font-weight: 600;
+    font-family: 'platypi';
+    text-shadow: 1px 1px black;
 }
 
-@media only screen and (max-width: 800px){
+footer button {
+    font-weight: 600;
+}
+
+/*Media Queries*/
+
+@media only screen and (max-width: 800px) {
     .nav-item {
         margin: 0 5px 10px 5px;
     }
+
     #header-title {
         font-size: 30px;
     }
+
     #header-img {
         height: 60px;
         width: 60px;
     }
+
     footer {
         justify-content: center;
     }
+
     #bryan {
         height: 125px;
         width: 125px;
@@ -170,33 +200,44 @@ footer p {
         box-shadow: 3px 3px var(--main-yellow);
         border: 3px solid black;
     }
+
     #about-content {
         flex-direction: column;
         align-items: center;
     }
+
     .page-title {
         font-size: 25px;
     }
+
     #contact-content {
         margin: 0;
         width: 500px;
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
     .nav-item {
         margin: 5px 2px 5px 2px;
     }
+
     footer p {
         font-size: 15px;
     }
+
     #about-text {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 13px;
         padding: 10px 10px 10px 10px;
     }
+
     #contact-content {
         margin: 0;
         width: 300px;
+    }
+
+    header img {
+        box-shadow: 5px 5px black;
+        margin-top: 0;
     }
 }
