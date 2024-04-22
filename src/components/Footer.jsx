@@ -20,7 +20,7 @@ export default function Footer() {
                     borderRadius='full'
                     border='#3182CE 3px solid'
                     boxSize={{base: '25px', sm: '25px', md: '35px', lg: '50px', xl: '60px'}}
-                    src="../src/assets/images/Logo.png"
+                    src="/images/Logo.png"
                     alt='BS logo'
                 />
                 <Link href='https://github.com/ChairSitter' isExternal><Button size="md" variant="ghost" colorScheme="gray" color="white" opacity=".75" _hover={{ color: 'black', bgColor: 'white' }}>GitHub</Button></Link>

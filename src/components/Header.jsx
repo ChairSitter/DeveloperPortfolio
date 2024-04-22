@@ -11,7 +11,7 @@ function Header() {
                     borderRadius='full'
                     border='#3182CE 5px solid'
                     boxSize='140px'
-                    src="../src/assets/images/Logo.png"
+                    src="/images/Logo.png"
                     alt='BS logo'
                 />
                 <h1 id="header-title">

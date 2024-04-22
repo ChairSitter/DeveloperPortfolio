@@ -4,7 +4,7 @@ import List from '../components/List';
 export default function Resume() {
     return (
         <>
-            <h2 className="page-title">My Resume and Skills:</h2>
+            <h2 className="page-title">My Resume:</h2>
             <div id="resume-content" className="page-content">
                 <p>
                     Please download my resume for more information, and feel free to reach out! <br/><br/>

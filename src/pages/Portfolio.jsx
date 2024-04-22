@@ -17,7 +17,7 @@ export default function Portfolio() {
             <div className="page-content" id="portfolio-content">
                 <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
                     <Project
-                        projSource={'../src/assets/images/ForecastImg.png'}
+                        projSource={'/images/ForecastImg.png'}
                         projAlt={'Forecast Finder app screenshot'}
                         projHeading={'Forecast Finder'}
                         projAdd={'weather app'}
@@ -26,7 +26,7 @@ export default function Portfolio() {
                         projGH={'https://github.com/ChairSitter/WeatherApp'}
                     />
                     <Project
-                        projSource={'../src/assets/images/BuyMeThingsImg.png'}
+                        projSource={'/images/BuyMeThingsImg.png'}
                         projAlt={'BuyMeThings app screenshot'}
                         projHeading={'Buy Me Things'}
                         projAdd={'wish list app'}
@@ -35,7 +35,7 @@ export default function Portfolio() {
                         projGH={'https://github.com/rbenjamin4/WishList'}
                     />
                     <Project
-                        projSource={'../src/assets/images/MediMinderImg.png'}
+                        projSource={'/images/MediMinderImg.png'}
                         projAlt={'MediMinder app screenshot'}
                         projHeading={'MediMinder'}
                         projAdd={'medication app'}
@@ -44,7 +44,7 @@ export default function Portfolio() {
                         projGH={'https://github.com/cspecialblackberry/MediMinder-App'}
                     />
                     <Project
-                        projSource={'../src/assets/images/RainbowImg.png'}
+                        projSource={'/images/RainbowImg.png'}
                         projAlt={'Rainbow Multi-Match app screenshot'}
                         projHeading={'Rainbow Multi-Match'}
                         projAdd={'betting game'}
@@ -53,7 +53,7 @@ export default function Portfolio() {
                         projGH={'https://github.com/ChairSitter/MatchingGame'}
                     />
                     <Project
-                        projSource={'../src/assets/images/GoldRingGuessImg.png'}
+                        projSource={'/images/GoldRingGuessImg.png'}
                         projAlt={'Gold Ring Guess app screenshot'}
                         projHeading={'Gold Ring Guess'}
                         projAdd={'estimation game'}
@@ -62,7 +62,7 @@ export default function Portfolio() {
                         projGH={'https://github.com/ChairSitter/Gold-Ring-Guess'}
                     />
                     <Project
-                        projSource={'../src/assets/images/CyberWarImg.png'}
+                        projSource={'/images/CyberWarImg.png'}
                         projAlt={'Cyber War app screenshot'}
                         projHeading={'Cyber War'}
                         projAdd={'card game'}

@@ -45,7 +45,7 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), black), url('./assets/images/redbackground.jpg');
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), black), url('/images/redbackground.jpg');
     border-bottom: 10px solid black;
     border-top: 15px solid black;
     padding-top: 5px;
@@ -155,7 +155,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--main-red);
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), black), url('./assets/images/redbackground.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), black), url('/images/redbackground.jpg');
     background-size: cover;
     border-top: 10px solid black;
     width: 100%;
