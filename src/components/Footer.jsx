@@ -1,7 +1,6 @@
 import { Link } from '@chakra-ui/react';
 import { Button, Text, Image } from '@chakra-ui/react';
 import { useLocation } from 'react-router-dom';
-import { Link as RouterLink } from 'react-router-dom';
 
 const breakpoints = {
     base: '0em', // 0px
@@ -18,13 +17,13 @@ export default function Footer() {
             <footer>
                 <Text color="#E6DF32" opacity=".85">Contact Me:</Text>
                 <Link href='https://www.linkedin.com/in/bryan-schneller-28b954244/' isExternal><Button colorScheme="gray" size="md" variant="ghost" color="white" opacity=".75" _hover={{ color: 'black', bgColor: 'white' }}>LinkedIn</Button></Link>
-                <RouterLink to='/'><Image
+                <Image
                     borderRadius='full'
                     border='#3182CE 3px solid'
                     boxSize={{base: '25px', sm: '25px', md: '35px', lg: '50px', xl: '60px'}}
                     src="/images/Logo.png"
                     alt='BS logo'
-                /></RouterLink>
+                />
                 <Link href='https://github.com/ChairSitter' isExternal><Button size="md" variant="ghost" colorScheme="gray" color="white" opacity=".75" _hover={{ color: 'black', bgColor: 'white' }}>GitHub</Button></Link>
                 <Link href='https://www.instagram.com/bschnell91/' isExternal><Button size="md" variant="ghost" colorScheme="gray" color="white" opacity=".75" _hover={{ color: 'black', bgColor: 'white' }}>Instagram</Button></Link>
             </footer>

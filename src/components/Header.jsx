@@ -7,13 +7,13 @@ function Header() {
     return (
         <header>
             <div id="header-l">
-                <Link to="/"><Image
+                <Image
                     borderRadius='full'
                     border='#3182CE 5px solid'
                     boxSize='140px'
                     src="/images/Logo.png"
                     alt='BS logo'
-                /></Link>
+                />
                 <h1 id="header-title">
                     Bryan Schneller Web Development
                 </h1>
