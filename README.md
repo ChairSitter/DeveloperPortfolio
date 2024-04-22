@@ -1,6 +1,6 @@
 # Personal Developer Portfolio Website: Bryan Schneller
 
-[Screenshot of App](/images/screenshot.png)
+![Screenshot of App](/public/images/screenshot.png)
 
 ## Description
 
