@@ -70,6 +70,33 @@ export default function Portfolio() {
                         projURL={'https://chairsitter.github.io/CyberWarGame/'}
                         projGH={'https://github.com/ChairSitter/CyberWarGame'}
                     />
+                    <Project
+                        projSource={'/images/FunnyMessage.png'}
+                        projAlt={'Funny Message Generator screenshot'}
+                        projHeading={'Funny Message'}
+                        projAdd={'Generator site'}
+                        projText={'This is a fun app I made early on in my coding journey. It creates funny sentences using arrays of 30 words per type of speech.'}
+                        projURL={'https://chairsitter.github.io/funnymessage/'}
+                        projGH={'https://github.com/ChairSitter/funnymessage'}
+                    />
+                    <Project
+                        projSource={'/images/BGC.png'}
+                        projAlt={'Board Game Central screenshot'}
+                        projHeading={'Board Game Central'}
+                        projAdd={'company site'}
+                        projText={'This is a sample company site I made to practice HTML and CSS skills early on. It was the first time I used a triadic color scheme.'}
+                        projURL={'https://chairsitter.github.io/BoardGameCentral/'}
+                        projGH={'https://github.com/ChairSitter/BoardGameCentral'}
+                    />
+                    <Project
+                        projSource={'/images/JSQuiz.png'}
+                        projAlt={'JavaScript Speed Quiz screenshot'}
+                        projHeading={'JS Speed Quiz'}
+                        projAdd={'trivia game'}
+                        projText={'This application is a timed quiz about 10 javascript concepts. It gives points based on speed and accuracy, and saves scores locally.'}
+                        projURL={'https://chairsitter.github.io/JavascriptQuizGame/'}
+                        projGH={'https://github.com/ChairSitter/JavascriptQuizGame'}
+                    />
                 </SimpleGrid>
             </div>
         </>
