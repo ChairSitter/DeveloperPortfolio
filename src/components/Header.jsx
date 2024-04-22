@@ -15,7 +15,7 @@ function Header() {
                     alt='BS logo'
                 />
                 <h1 id="header-title">
-                    Bryan Schneller's Web Portfolio
+                    Bryan Schneller Web Development
                 </h1>
             </div>
             <Navigation />
