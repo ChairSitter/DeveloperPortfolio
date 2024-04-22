@@ -72,8 +72,8 @@ export default function Portfolio() {
                     />
                     <Project
                         projSource={'/images/FunnyMessage.png'}
-                        projAlt={'Funny Message Generator screenshot'}
-                        projHeading={'Funny Message'}
+                        projAlt={'Funny Sentence Generator screenshot'}
+                        projHeading={'Funny Sentence'}
                         projAdd={'Generator site'}
                         projText={'This is a fun app I made early on in my coding journey. It creates funny sentences using arrays of 30 words per type of speech.'}
                         projURL={'https://chairsitter.github.io/funnymessage/'}
