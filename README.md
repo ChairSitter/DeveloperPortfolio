@@ -1,6 +1,6 @@
 # Personal Developer Portfolio Website: Bryan Schneller
 
-![Screenshot of App](/images/Screenshot 2024-04-22 150239.png.png)Screenshot 2024-04-22 150239.png
+![Screenshot of App](/images/Screenshot 2024-04-22 150239.png)
 
 ## Description
 
