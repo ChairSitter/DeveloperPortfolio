@@ -1,6 +1,5 @@
 import { Link } from '@chakra-ui/react';
 import { Button, Text, Image } from '@chakra-ui/react';
-import { useLocation } from 'react-router-dom';
 
 const breakpoints = {
     base: '0em', // 0px

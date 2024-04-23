@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Image } from '@chakra-ui/react';
 import Navigation from "./Navigation";
 

@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardBody, CardFooter, Stack, Image, Heading, Text, Button, ButtonGroup, Link } from '@chakra-ui/react';
+import { Card, CardBody, Stack, Image, Heading, Text, Button, ButtonGroup, Link } from '@chakra-ui/react';
 
 export default function Project(props) {
     const { projSource, projAlt, projHeading, projAdd, projText, projURL, projGH } = props;
