@@ -93,6 +93,7 @@ main {
 .page-content {
     display: flex;
     justify-content: center;
+    align-items: c;
 }
 
 #bryan {
@@ -125,11 +126,6 @@ main {
 
 #portfolio-content {
     margin-bottom: 75px;
-}
-
-#contact-content {
-    margin: 0 100px 0 100px;
-    width: 600px;
 }
 
 #contact-content button {
@@ -207,10 +203,6 @@ footer button {
         font-size: 25px;
     }
 
-    #contact-content {
-        margin: 0;
-        width: 500px;
-    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -226,11 +218,6 @@ footer button {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 13px;
         padding: 10px 10px 10px 10px;
-    }
-
-    #contact-content {
-        margin: 0;
-        width: 300px;
     }
 
     header img {
