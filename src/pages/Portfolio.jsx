@@ -26,13 +26,13 @@ export default function Portfolio() {
                         projGH={'https://github.com/ChairSitter/WeatherApp'}
                     />
                     <Project
-                        projSource={'/images/BuyMeThingsImg.png'}
-                        projAlt={'BuyMeThings app screenshot'}
-                        projHeading={'Buy Me Things'}
-                        projAdd={'wish list app'}
-                        projText={'This full-stack application allows users to create wish lists for gifts with any URL, and share them with other registered users.'}
-                        projURL={'https://smart-wish-list.onrender.com/'}
-                        projGH={'https://github.com/rbenjamin4/WishList'}
+                        projSource={'/images/BubbleImg.png'}
+                        projAlt={'Bubble App Screenshot'}
+                        projHeading={'Bubble'}
+                        projAdd={'social media app'}
+                        projText={'This full-stack application allows users to create expressive profiles and share and reply to friends on a minimalist social media platform.'}
+                        projURL={'https://bubblesocial.netlify.app/'}
+                        projGH={'https://github.com/cspecialblackberry/Bubble_App'}
                     />
                     <Project
                         projSource={'/images/MediMinderImg.png'}
