@@ -13,7 +13,7 @@ const breakpoints = {
 export default function Portfolio() {
     return (
         <>
-            <h2 className="page-title">Check out my projects and games:</h2>
+            <h2 className="page-title">Web development projects:</h2>
             <div className="page-content" id="portfolio-content">
                 <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
                     <Project
