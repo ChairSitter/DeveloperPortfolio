@@ -9,7 +9,7 @@ export default function Resume() {
                 <p>
                     Please download my resume for more information, and feel free to reach out! <br/><br/>
                 </p>
-                <a href='/assets/resume.pdf' target="_blank"><Button size='lg' colorScheme='blue'>Bryan's Resume</Button></a>
+                <a href='/assets/Web Dev Resume.pdf' target="_blank"><Button size='lg' colorScheme='blue'>Bryan's Resume</Button></a>
                 <br/><br/>
                 <List></List>
             </div>
