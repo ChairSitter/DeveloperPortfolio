@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -10,12 +10,20 @@ import Portfolio from './pages/Portfolio.jsx';
 import Contact from './pages/Contact.jsx';
 import Resume from './pages/Resume.jsx';
 
+const theme = extendTheme({
+  config: { initialColorMode: 'dark', useSystemColorMode: false },
+  styles: {
+    global: {
+      body: { bg: '#0a0a0a', color: '#e8e8e8' }
+    }
+  }
+});
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <React.StrictMode>
-      <ChakraProvider disableGlobalStyle={true}>
+      <ChakraProvider theme={theme} disableGlobalStyle={true}>
         <App />
       </ChakraProvider>
     </React.StrictMode>,

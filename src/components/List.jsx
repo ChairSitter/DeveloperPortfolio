@@ -7,54 +7,58 @@ import {
     Td,
     TableContainer,
     Heading,
-} from '@chakra-ui/react'
-
-const breakpoints = {
-    base: '0em', // 0px
-    sm: '30em', // ~480px. em is a relative unit and is dependant on the font-size.
-    md: '48em', // ~768px
-    lg: '62em', // ~992px
-    xl: '80em', // ~1280px
-    '2xl': '96em', // ~1536px
-}
+} from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 const List = () => {
     return (
-        <TableContainer mb={75}>
-            <Heading textAlign={'center'}>Web Development Skills:</Heading>
-            <Table size={{base: 'sm', md: 'md', lg: 'lg'}}>
-                <Thead>
-                    <Tr>
-                        <Th>Front-end</Th>
-                        <Th>Back-end</Th>
-                        <Th>Other skills</Th>
-                    </Tr>
-                </Thead>
-                <Tbody>
-                    <Tr>
-                        <Td>HTML</Td>
-                        <Td>Node.js</Td>
-                        <Td>Git + GitHub</Td>
-                    </Tr>
-                    <Tr>
-                        <Td>CSS</Td>
-                        <Td>Express.js</Td>
-                        <Td>Jest testing</Td>
-                    </Tr>
-                    <Tr>
-                        <Td>JavaScript</Td>
-                        <Td>PostGreSQL</Td>
-                        <Td>Agile development</Td>
-                    </Tr>
-                    <Tr>
-                        <Td>React</Td>
-                        <Td>MongoDB</Td>
-                        <Td>Project development</Td>
-                    </Tr>
-                </Tbody>
-            </Table>
-        </TableContainer>
-    )
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+        >
+            <TableContainer mb={75}>
+                <Heading textAlign={'center'} mb={4} color="white !important">
+                    Web Development Skills:
+                </Heading>
+                <Table
+                    size={{ base: 'sm', md: 'md', lg: 'lg' }}
+                    variant="simple"
+                    colorScheme="whiteAlpha"
+                >
+                    <Thead>
+                        <Tr>
+                            <Th color="gray.300 !important">Front-end</Th>
+                            <Th color="gray.300 !important">Back-end</Th>
+                            <Th color="gray.300 !important">Other skills</Th>
+                        </Tr>
+                    </Thead>
+                    <Tbody>
+                        <Tr>
+                            <Td color="gray.400">HTML</Td>
+                            <Td color="gray.400">Node.js</Td>
+                            <Td color="gray.400">Git + GitHub</Td>
+                        </Tr>
+                        <Tr>
+                            <Td color="gray.400">CSS</Td>
+                            <Td color="gray.400">Express.js</Td>
+                            <Td color="gray.400">Jest testing</Td>
+                        </Tr>
+                        <Tr>
+                            <Td color="gray.400">JavaScript</Td>
+                            <Td color="gray.400">PostGreSQL</Td>
+                            <Td color="gray.400">Agile development</Td>
+                        </Tr>
+                        <Tr>
+                            <Td color="gray.400">React</Td>
+                            <Td color="gray.400">MongoDB</Td>
+                            <Td color="gray.400">Project development</Td>
+                        </Tr>
+                    </Tbody>
+                </Table>
+            </TableContainer>
+        </motion.div>
+    );
 }
 
 export default List;

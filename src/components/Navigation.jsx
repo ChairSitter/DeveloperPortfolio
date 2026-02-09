@@ -1,33 +1,48 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@chakra-ui/react';
-
-const breakpoints = {
-    base: '0em', // 0px
-    sm: '30em', // ~480px. em is a relative unit and is dependant on the font-size.
-    md: '48em', // ~768px
-    lg: '62em', // ~992px
-    xl: '80em', // ~1280px
-    '2xl': '96em', // ~1536px
-}
+import { motion } from 'framer-motion';
 
 export default function Navigation() {
     const currentPage = useLocation().pathname;
+    const navItems = [
+        { path: '/', label: 'ABOUT ME' },
+        { path: '/Portfolio', label: 'PORTFOLIO' },
+        { path: '/Contact', label: 'CONTACT' },
+        { path: '/Resume', label: 'RESUME' },
+    ];
+
     return (
-        <>
-            <ul className="navigation">
-                <li className="nav-item">
-                    <Link to="/"><Button size={{base: 'sm', md: 'md', lg: 'lg'}} colorScheme={currentPage === '/' ? 'gray' : 'blue'}>ABOUT ME</Button></Link>
-                </li>
-                <li className="nav-item">
-                    <Link to="/Portfolio"><Button size={{base: 'sm', md: 'md', lg: 'lg'}} colorScheme={currentPage === '/Portfolio' ? 'gray' : 'blue'}>PORTFOLIO</Button></Link>
-                </li>
-                <li className="nav-item">
-                    <Link to="/Contact"><Button size={{base: 'sm', md: 'md', lg: 'lg'}} colorScheme={currentPage === '/Contact' ? 'gray' : 'blue'}>CONTACT</Button></Link>
-                </li>
-                <li className="nav-item">
-                    <Link to="/Resume"><Button size={{base: 'sm', md: 'md', lg: 'lg'}} colorScheme={currentPage === '/Resume' ? 'gray' : 'blue'}>RESUME</Button></Link>
-                </li>
-            </ul>
-        </>
-    )
+        <ul className="navigation">
+            {navItems.map((item, i) => {
+                const isActive = currentPage === item.path;
+                return (
+                    <motion.li
+                        key={item.path}
+                        className="nav-item"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 * i, duration: 0.3 }}
+                    >
+                        <Link to={item.path}>
+                            <Button
+                                size={{ base: 'sm', md: 'md', lg: 'lg' }}
+                                variant={isActive ? 'solid' : 'outline'}
+                                colorScheme="blue"
+                                bg={isActive ? 'blue.500' : 'transparent'}
+                                color={isActive ? 'white' : 'gray.300'}
+                                borderColor={isActive ? 'blue.500' : 'whiteAlpha.300'}
+                                _hover={{
+                                    bg: isActive ? 'blue.600' : 'whiteAlpha.100',
+                                    borderColor: 'blue.400',
+                                    color: 'white',
+                                }}
+                            >
+                                {item.label}
+                            </Button>
+                        </Link>
+                    </motion.li>
+                );
+            })}
+        </ul>
+    );
 }
