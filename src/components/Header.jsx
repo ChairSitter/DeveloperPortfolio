@@ -13,6 +13,7 @@ function Header() {
         >
             <div id="header-l">
                 <motion.div
+                    className="header-logo-wrapper"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
@@ -21,7 +22,10 @@ function Header() {
                         borderRadius='full'
                         border='2px solid'
                         borderColor='black.800'
-                        boxSize={{ base: '80px', md: '120px', lg: '140px' }}
+                        boxSize={{ base: '60px', sm: '70px', md: '120px', lg: '140px' }}
+                        minW={{ base: '60px', sm: '70px', md: '120px', lg: '140px' }}
+                        minH={{ base: '60px', sm: '70px', md: '120px', lg: '140px' }}
+                        objectFit="cover"
                         src="/images/Logo.png"
                         alt='BS logo'
                     />
